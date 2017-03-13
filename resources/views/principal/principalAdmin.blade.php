@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="{!! asset('css/bootstrap.min.css') !!}">
+		<link rel="stylesheet" type="text/css" href="{!! asset('css/estilo.css') !!}">
 		<script src="{!! asset('js/bootstrap.min.js')!!}"></script>
 		<script src="{!! asset('js/jquery-3.1.1.min.js') !!}"></script>
 
@@ -38,14 +39,11 @@
 	    <div class="col-sm-9 text-left"> 
 	      <h1>Bienvenido</h1>
 	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-	      <hr>
-	      <h3>Test</h3>
-	      <p>Lorem ipsum...</p>
 	    </div>
 	  </div>
 	</div>
 
-	<footer class="container-fluid">
+	<footer class="container-fluid text-center">
 	  <p>Developer for Mireya Terceros Ovando</p>
 	</footer>
 

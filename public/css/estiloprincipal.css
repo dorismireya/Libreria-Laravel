@@ -1,23 +1,23 @@
- .navbar {
+.navbar {
       margin-bottom: 0;
       border-radius: 0;
-    }
+}
     
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
+/* Add a gray background color and some padding to the footer */
+footer {
+      background-color: #222222;
+      color: white;
+      padding: 20px;
+}
     
-  .carousel-inner img {
-      width: 100%; /* Set width to 100% */
+.carousel-inner img {
+      width: 50%; /* Set width to 100% */
       margin: auto;
-      min-height:200px;
-  }
+      min-height:100px;
+}
 
-  /* Hide the carousel text when the screen is less than 600 pixels wide */
-  @media (max-width: 600px) {
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
     .carousel-caption {
       display: none; 
-    }
-  }
+}
