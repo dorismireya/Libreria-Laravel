@@ -19,6 +19,7 @@ Route::get('usuario/login', function(){
 	return view('usuarios.login');
 });
 
-Route::get('principal/principal', function(){
-	return view('principal.principalAdmin');
+Route::get('principal', function(){
+	return view('plantillas.inicio');
 });
+
