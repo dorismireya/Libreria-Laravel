@@ -30,5 +30,7 @@ Route::get('principal/menu', function(){
 
 Route::get('/', 'PrincipalController@inicio');
 
+Route::resource('usuarios', 'UsuarioController');
+
 
 

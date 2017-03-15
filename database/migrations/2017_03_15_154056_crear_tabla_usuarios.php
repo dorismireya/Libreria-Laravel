@@ -24,7 +24,7 @@ class CrearTablaUsuarios extends Migration
                 'adm',
                 'pub',
                 'lec',
-                ]);
+                ])->nullable();
             $table->timestamps();
         });
     }
