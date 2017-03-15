@@ -1,8 +1,10 @@
-@extends('principal.principalAdmin')
+
+@extends('plantillas.menu')
+
 
 @section('contenido')
 <div>
-	<h1>Bienvenido</h1>
+	<h1>Bienvenida</h1>
 	<div class="text-center">
 		<img src="{!! asset('imagen/indice.jpg') !!}">	
 	</div>
@@ -12,4 +14,4 @@
 		brindando herramientas digitales para mejorar este proceso.
 	</p>
 </div>
-@endsection
+@stop

@@ -20,6 +20,14 @@ Route::get('usuario/login', function(){
 });
 
 Route::get('principal', function(){
+	return view('plantillas.menu');
+
+});
+
+Route::get('principal/menu', function(){
 	return view('plantillas.inicio');
 });
+
+
+
 

@@ -8,6 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="{!! asset('css/estilo.css') !!}">
 		<script src="{!! asset('js/bootstrap.min.js')!!}"></script>
 		<script src="{!! asset('js/jquery-3.1.1.min.js') !!}"></script>
+		<script src="{!! asset('js/menu.js') !!}"></script>
 
 </head>
 <body>
@@ -28,26 +29,10 @@
 	    </div>
 	  </div>
 	</nav>
-	  
-	<div class="container-fluid text-center">    
-	  <div class="row content">
-	    <div class="col-sm-3 sidenav">
-	      <p><a href="#">Link</a></p>
-	      <p><a href="#">Link</a></p>
-	      <p><a href="#">Link</a></p>
-	    </div>
-	    <div class="col-sm-9 text-left">
-		    <article id="contenido">
-				<div class="container-fluid">
-					@yield('contenido')		
-				</div>
-			</article>
-	  </div>
-	</div>
+	@yield('menu')
 
 	<footer class="container-fluid text-center">
 	  <p>Developer for Mireya Terceros Ovando</p>
 	</footer>
-
 </body>
 </html>
