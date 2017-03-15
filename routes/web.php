@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('index');
 });
 
@@ -26,8 +26,9 @@ Route::get('principal', function(){
 
 Route::get('principal/menu', function(){
 	return view('plantillas.inicio');
-});
+});*/
 
+Route::get('/', 'PrincipalController@inicio');
 
 
 
