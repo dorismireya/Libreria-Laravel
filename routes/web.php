@@ -32,5 +32,9 @@ Route::get('/', 'PrincipalController@inicio');
 
 Route::resource('usuarios', 'UsuarioController');
 
+Route::get('usuario_crear', function(){
+	return view('usuarios.create');
+});
+
 
 

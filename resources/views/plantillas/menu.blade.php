@@ -10,10 +10,10 @@
             <span class="hasSub"><i class="glyphicon glyphicon-user"></i> Usuarios</span>
             <ul class="list-group expanded">
               <li class="list-group-item">
-                <span class="hasSub"><i class="glyphicon glyphicon-th-list"></i> Listar Usuarios</span>
+                <span class="hasSub"><i class="glyphicon glyphicon-th-list"></i><a href="{{ url('usuarios') }}"> Listar Usuarios</a></span>
               </li>
               <li class="list-group-item">
-                <span class="hasSub"><i class="glyphicon glyphicon-plus"></i> Nuevo Usuario</span>
+                <span class="hasSub"><i class="glyphicon glyphicon-plus"></i><a href="{{ url('/usuario_crear') }}"> Nuevo Usuario</a></span>
               </li>
             </ul>
           </li>
