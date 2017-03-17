@@ -7,7 +7,10 @@
 			<h4>Editar Usuario</h4>
 		</div>
 		<div class="panel-body">
-			{!! Form::model($usuario, ['route' => ['usuarios.update', $usuario->id_usuario], 'method' => 'put',]) !!}
+			{!! Form::model($usuario, [
+				'route' => ['usuarios.update', $usuario->id_usuario],
+				'method' => 'put',
+				]) !!}
 				@include('usuarios.form')		
 				<div class="text-center">
 					<button type="submit" class="btn btn-success">

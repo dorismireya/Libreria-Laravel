@@ -4,15 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Modelos\Usuario;
-use App\Http\Requests\StoreUsuario;
 
 class UsuarioController extends Controller
 {
     
-    public function __construct(){
-
-        $this->middleware('autentificado', ['except'=>['login', 'logear']]);
-    }
 
 
     /**
@@ -85,7 +80,9 @@ class UsuarioController extends Controller
         $usuario = Usuario::findOrFail($id);
         $usuario->fill($request->all());
         $usuario->save();
-        return redirect()->route('usuarios.show', ['id' => $usuario->id_usuario]);
+        return redirect()->route('usuarios.show', 
+            ['id' => $usuario->id_usuario]
+            );
     }
 
     /**
@@ -101,21 +98,4 @@ class UsuarioController extends Controller
         return redirect()->route('usuarios.index');
     }
 
-    public function login(){
-        return view('usuarios.login');
-    }
-
-    public function logear(Request $request){
-        $credenciales = $request->only(['username', 'password']);
-        if(auth()->attempt($credenciales))
-            return redirect()->route('index');
-        
-        else return redirect()->route('usuarios.login')->withErrors(['login' => 'Usuario o contraseña incorrectos'])
-                ->withInput(['username' => $request->input('username'),]); 
-    }
-
-    public function logout(){
-        auth()->logout();
-        return redirect()->route('index');
-    }
 }

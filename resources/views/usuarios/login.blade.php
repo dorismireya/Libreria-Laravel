@@ -12,29 +12,15 @@
 	        <div class="col-sm-6 col-md-4 col-md-offset-4">
 	            <h1 class="text-center login-title">Ingrese sus Datos</h1>
 	            <div class="account-wall">
-	                <img class="profile-img" src="{!! asset('imagen/img_avatar2.png') !!}" alt="">
-		                @if($errors->has('login'))
-						<div class="alert alert-danger">
-							{{ $errors->first('login') }}
-						</div>
-						@endif
-						<form class="form-signin">
-						{!! Form::open(['route'=>'usuarios.logear']) !!}
-							<div class="form-control">
-								{!! Form::label('username', 'Nombre de usuario', ['class' => 'control-label']) !!}
-								{!! Form::text('username', null, ['class' => 'form-control']) !!}
-							
-								{!! Form::label('password', 'Contraseña', ['class' => 'control-label']) !!}
-								{!! Form::password('password', ['class' => 'form-control']) !!}
-							</div>
-							<div class="text-right">
-								<button type="submit" class="btn btn-lg btn-primary btn-block"> Ingresar </button>
-							</div>
-						{!! Form::close() !!}
-						 <a href="#" class="text-center new-account">Crear Cuenta</a>
-						</form>	
-	            </div>
-	           
+	                 <img class="profile-img" src="{!! asset('imagen/img_avatar2.png') !!}"
+	                    alt="">
+	                <form class="form-signin">
+	                <input type="text" class="form-control" placeholder="Nombre de Usuario" required autofocus>
+	                <input type="password" class="form-control" placeholder="Contraseña" required>
+	                <button class="btn btn-lg btn-primary btn-block" type="submit">
+	                    Ingresar</button>
+	                </form>
+	                 <a href="#" class="text-center new-account">Crear Cuenta</a>
 	        </div>
 	    </div>
 	</div>

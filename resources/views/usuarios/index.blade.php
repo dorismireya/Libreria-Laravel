@@ -7,7 +7,6 @@
 			<h4>Lista de usuarios</h4>
 		</div>
 		<div class="panel-body">
-			
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -28,10 +27,11 @@
 						<td>{{ $usuario->email }}</td>
 						<td>{{ $usuario->tipo }}</td>
 						<td>
-							<a href="{{ route('usuarios.show', ['id' => $usuario->id_usuario]) }}" 
+							<a href="{{ route('usuarios.show', 
+								['id' => $usuario->id_usuario]) }}" 
 							class="btn btn-xs btn-info" title="Ver">
 								<b class="glyphicon glyphicon-eye-open"></b>
-							</a><br>
+							</a>
 							<a href="{{ route('usuarios.edit', 
 								['id' => $usuario->id_usuario]) }}" 
 								class="btn btn-xs btn-success" title="Editar">

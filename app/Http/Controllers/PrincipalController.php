@@ -10,7 +10,4 @@ class PrincipalController extends Controller
     	return view('index');
     }
 
-    public function inicioAdmin(){
-    	return view('plantillas.inicio');
-    }
 }
