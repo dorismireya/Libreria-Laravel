@@ -28,9 +28,17 @@ Route::get('principal/menu', function(){
 	return view('plantillas.inicio');
 });*/
 
-Route::get('/', 'PrincipalController@inicio');
+Route::get('/', 'PrincipalController@inicio')->name('index');
+
+Route::get('login', 'UsuarioController@login')->name('usuarios.login');
+Route::post('logear', 'UsuarioController@logear')->name('usuarios.logear');
+Route::get('logear/inicio', 'PrincipalController@inicioAdmin')->name('plantillas.inicio');
+Route::get('logout', 'UsuarioController@logout')->name('usuarios.logout');
+Route::get('usuarios/inicio', 'PrincipalController@inicioAdmin')->name('plantillas.inicio');
 
 Route::resource('usuarios', 'UsuarioController');
+
+//Route::get('login/principalAdmin', 'UsuarioController@index')->name('usuarios.inicio');
 
 Route::get('usuario_crear', function(){
 	return view('usuarios.create');

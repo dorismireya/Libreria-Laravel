@@ -26,6 +26,7 @@ class CrearTablaUsuarios extends Migration
                 'lec',
                 ])->nullable();
             $table->timestamps();
+            $table->rememberToken();
         });
     }
 

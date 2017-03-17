@@ -24,7 +24,9 @@
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="{{ url('usuario/login') }}"><span class="glyphicon glyphicon-log-in"></span> Ingresar</a></li>
+		      	@if(!Auth::check())
+					<li><a href="{{ route('usuarios.login') }}"><span class="glyphicon glyphicon-log-in"></span> Iniciar sesión</a></li>
+				@endif    	
 		      </ul>
 		    </div>
 	  </div>

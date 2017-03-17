@@ -24,7 +24,27 @@
 	    </div>
 	   
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+	      	@if(Auth::check())
+	      	<li class="dropdown">
+						<a href="#" 
+							class="dropdown-toggle" 
+							data-toggle="dropdown" 
+							role="button" 
+							aria-haspopup="true" 
+							aria-expanded="false">
+							<b class="glyphicon glyphicon-log-out"></b>
+							{{ Auth::user()->username }}&nbsp;
+							<span class="caret"></span>
+						</a>
+			          	<ul class="dropdown-menu">
+			            	<li>
+			            		<a href="{{ route('usuarios.logout') }}">
+			            			Cerrar sesión
+			            		</a>
+			            	</li>
+			          	</ul>
+			  </li>
+			@endif
 	      </ul>
 	    </div>
 	  </div>

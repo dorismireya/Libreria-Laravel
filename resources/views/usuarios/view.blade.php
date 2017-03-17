@@ -34,13 +34,20 @@
 				</tr>
 			</table>
 			<div class="text-center">
-				<a href="" class="btn btn-success">
+				<a href="{{ route('usuarios.edit', ['id' => $usuario->id_usuario]) }}" 
+					class="btn btn-success">
 					<b class="glyphicon glyphicon-edit"></b> Editar
 				</a>
-				<a href="" class="btn btn-danger">
-					<b class="glyphicon glyphicon-trash"></b> Eliminar
-				</a>
-				<a href="" class="btn btn-warning">
+				{!! Form::open([
+					'route' => ['usuarios.destroy', $usuario->id_usuario],
+					'method' => 'delete',
+					'class' => 'form-eliminar',
+					]) !!}
+					<button class="btn btn-danger">
+						<b class="glyphicon glyphicon-trash"></b> Eliminar
+					</button>
+				{!! Form::close() !!}
+				<a href="" class="btn btn-primary">
 					<b class="glyphicon glyphicon-remove"></b> Salir
 				</a>
 			</div>
