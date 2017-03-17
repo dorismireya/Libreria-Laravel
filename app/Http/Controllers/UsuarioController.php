@@ -49,7 +49,8 @@ class UsuarioController extends Controller
      */
     public function show($id)
     {
-        //
+        $usuario = Usuario::findOrFail($id);
+        return view('usuarios.view', compact('usuario'));
     }
 
     /**
@@ -60,7 +61,8 @@ class UsuarioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $usuario = Usuario::findOrFail($id);
+        return view('usuarios.edit', compact('usuario'));
     }
 
     /**
@@ -72,7 +74,10 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $usuario = Usuario::findOrFail($id);
+        $usuario->fill($request->all());
+        $usuario->save();
+        return redirect()->route('usuarios.show', ['id' => $usuario->id_usuario]);
     }
 
     /**
@@ -83,6 +88,8 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $usuario = Usuario::findOrFail($id);
+        $usuario->delete();
+        return redirect()->route('usuarios.index');
     }
 }

@@ -12,4 +12,10 @@ class Usuario extends Model
     public $fillable = [
     	'nombres', 'apellidos', 'email', 'username', 'password', 'tipo'
     	];
+
+    public function setPasswordAttribute($value)
+    {
+    	if($value !== null)
+    		$this->attributes['password'] = bcrypt($value);
+    }
 }
