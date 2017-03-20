@@ -21,10 +21,10 @@
             <span class="hasSub"><i class="glyphicon glyphicon-book"></i> Libros</span>
             <ul class="list-group expanded">
               <li class="list-group-item">
-                <span class="hasSub"><i class="glyphicon glyphicon-th-list"></i> Listar Libros</span>
+                <span class="hasSub"><i class="glyphicon glyphicon-th-list"></i><a href="{{ url('libros') }}"> Listar Libros</a></span>
               </li>
               <li class="list-group-item">
-                <span class="hasSub"><i class="glyphicon glyphicon-plus"></i> Nuevo Libro</span>
+                <span class="hasSub"><i class="glyphicon glyphicon-plus"></i><a href="{{ url('/libro_crear') }}"> Nuevo Libro</a></span>
               </li>
             </ul>
           </li>

@@ -53,7 +53,7 @@ class UsuarioController extends Controller
     public function show($id)
     {
         $usuario = Usuario::findOrFail($id);
-        return view('usuarios.view', compact('usuario'));
+        return view('usuarios.view', compact('usuarios'));
     }
 
     /**
@@ -65,7 +65,7 @@ class UsuarioController extends Controller
     public function edit($id)
     {
         $usuario = Usuario::findOrFail($id);
-        return view('usuarios.edit', compact('usuario'));
+        return view('usuarios.edit', compact('usuarios'));
     }
 
     /**
@@ -96,6 +96,25 @@ class UsuarioController extends Controller
         $usuario = Usuario::findOrFail($id);
         $usuario->delete();
         return redirect()->route('usuarios.index');
+    }
+
+
+    public function login(){
+        return view('usuarios.login');
+    }
+
+    public function logear(Request $request){
+        $credenciales = $request->only(['username', 'password']);
+        if(auth()->attempt($credenciales))
+            return redirect()->route('principal.incio');
+        else return redirect()-> route('usuarios.login')
+                            ->withErrors(['login'=>'Usuario o Contraseña Incorrecto'])
+                            ->withInput(['username'=>$request->input('username'),]);
+    }
+
+    public function logout(){
+        auth()->logout();
+        return redirect()->route('index');
     }
 
 }

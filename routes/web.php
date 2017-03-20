@@ -12,20 +12,20 @@
 */
 
 Route::get('/', 'PrincipalController@inicio')->name('index');
+Route::get('principalAdmin', 'PrincipalController@inicioAdmin')->name('principal.incio');
 
-Route::get('usuario/login', function(){
-	return view('usuarios.login');
-});
-
-Route::get('principal', function(){
-	return view('plantillas.inicio');
-});
-
+Route::get('login', 'UsuarioController@login')->name('usuarios.login');
+Route::post('logear', 'UsuarioController@logear')->name('usuarios.logear');
+Route::get('logout', 'UsuarioController@logout')->name('usuarios.logout');
 Route::resource('usuarios', 'UsuarioController');
-
 Route::get('usuario_crear', function(){
 	return view('usuarios.create');
 });
 
+Route::resource('libros', 'LibroController');
+
+Route::get('libro_crear', function(){
+	return view('libros.create');
+});
 
 

@@ -24,7 +24,8 @@
 	    </div>
 	   
 	      <ul class="nav navbar-nav navbar-right">
-	      <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+	      {{ Auth::user()->username }}&nbsp;
+	      <li><a href="{{ route('usuarios.logout') }}"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
 	      </ul>
 	    </div>
 	  </div>
