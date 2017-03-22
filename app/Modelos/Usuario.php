@@ -13,5 +13,17 @@ class Usuario extends User
     public $fillable = [
     	'nombres', 'apellidos', 'email', 'username', 'password', 'tipo'
     	];
+
+    public function setPasswordAttribute($value)
+    {
+    	if($value !== null)
+    		$this->attributes['password'] = bcrypt($value);
+    }
+    
+    public function getNombreCompletoAttribute()
+    {
+        return $this->attributes['nombres'] . ' ' .
+            $this->attributes['apellidos'];
+    }
 }
     

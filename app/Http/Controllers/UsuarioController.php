@@ -15,6 +15,11 @@ class UsuarioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __constructor(){
+        $this->middleware('autentificado', ['except'=>['login', 'logear']]);
+    }
+
+
     public function index()
     {
         $usuarios = Usuario::all();
@@ -37,7 +42,7 @@ class UsuarioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUsuario $request)
     {
         $valores = $request->all();
         Usuario::create($valores);
@@ -116,5 +121,19 @@ class UsuarioController extends Controller
         auth()->logout();
         return redirect()->route('index');
     }
+
+    public function perfil()
+    {
+        $usuario = auth()->user();
+        return view('usuarios.perfil', compact('usuario'));
+    }
+
+    /*public function nombreUsuario($id)
+    {
+        $usuario = Usuario::findOrFail($id);
+        //$ruta = storage_path($usuario->foto);
+        //return file_get_contents($ruta);
+        //return $usuario->nombres;
+    }*/
 
 }

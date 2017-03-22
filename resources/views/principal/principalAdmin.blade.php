@@ -22,11 +22,25 @@
 	      </button>
 	      <a class="navbar-brand" href="#">Logo</a>
 	    </div>
-	   
+	      @if(Auth::check())
 	      <ul class="nav navbar-nav navbar-right">
-	      {{ Auth::user()->username }}&nbsp;
-	      <li><a href="{{ route('usuarios.logout') }}"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
-	      </ul>
+	      <li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
+							aria-expanded="false"> <b class="glyphicon glyphicon-user"></b>
+							{{ Auth::user()->id_usuario}}&nbsp;
+							
+							<span class="caret"></span>
+						</a>
+			          	<ul class="dropdown-menu">
+			            	<li>
+			            		<a href="{{ route('usuarios.logout') }}">
+			            			Cerrar sesión
+			            		</a>
+			            	</li>
+			          	</ul>
+			        </li>
+			  </ul>
+			  @endif
 	    </div>
 	  </div>
 	</nav>

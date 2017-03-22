@@ -37,10 +37,6 @@ class LibroController extends Controller
     public function store(Request $request)
     {
         $valores = $request->all();
-        //echo count($valores);
-        //echo $valores[0]."prue";
-        //echo $valores[1];
-        //echo $valores[2];
         Libro::create($valores);
         return redirect()->route('libros.index');
     }
