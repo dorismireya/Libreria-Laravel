@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CrearTablaLibros extends Migration
+class CrearTablaRoles extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CrearTablaLibros extends Migration
      */
     public function up()
     {
-        Schema::create('libros', function(Blueprint $table){
-            $table->increments('id_libro');
-            $table->string('titulo');
-            $table->string('descripcion');
-            $table->string('archivo')->nullable();
+
+        Schema::create('roles', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->increments('id_rol');
+            $table->string('rol');
+            $table->string('detalle');
+            $table->string('estado');
             $table->timestamps();
+
         });
     }
 
@@ -29,6 +32,6 @@ class CrearTablaLibros extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('libros');
+        Schema::dropIfExists('roles');
     }
 }

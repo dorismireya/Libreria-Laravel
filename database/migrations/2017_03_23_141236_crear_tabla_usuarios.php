@@ -14,6 +14,7 @@ class CrearTablaUsuarios extends Migration
     public function up()
     {
         Schema::create('usuarios', function(Blueprint $table){
+            $table->engine = 'InnoDB';
             $table->increments('id_usuario');
             $table->string('nombres');
             $table->string('apellidos');
@@ -25,8 +26,11 @@ class CrearTablaUsuarios extends Migration
                 'pub',
                 'lec',
                 ])->nullable();
+            $table->string('estado');
             $table->timestamps();
             $table->rememberToken();
+
+
         });
     }
 

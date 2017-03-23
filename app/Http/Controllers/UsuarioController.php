@@ -128,12 +128,6 @@ class UsuarioController extends Controller
         return view('usuarios.perfil', compact('usuario'));
     }
 
-    /*public function nombreUsuario($id)
-    {
-        $usuario = Usuario::findOrFail($id);
-        //$ruta = storage_path($usuario->foto);
-        //return file_get_contents($ruta);
-        //return $usuario->nombres;
-    }*/
+    
 
 }

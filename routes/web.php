@@ -24,6 +24,15 @@ Route::get('usuario_crear', function(){
 
 Route::resource('libros', 'LibroController');
 
+Route::resource('tareas', 'TareaController');
+
+Route::resource('funciones', 'FuncionController');
+
+Route::resource('roles', 'RolController');
+
+//Route::get('usuarioTarea', 'UsuarioTareaController');
+//Route::get('tareaRol', 'TareaRolController');
+
 Route::get('libro_crear', function(){
 	return view('libros.create');
 });

@@ -25,5 +25,9 @@ class Usuario extends User
         return $this->attributes['nombres'] . ' ' .
             $this->attributes['apellidos'];
     }
+
+    public function usuarioTarea(){
+        return $this->hasMany('App\Modelos\UsuarioTarea', 'id_usuario');
+    }
 }
     

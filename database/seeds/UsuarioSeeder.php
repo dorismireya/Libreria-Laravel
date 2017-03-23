@@ -20,6 +20,7 @@ class UsuarioSeeder extends Seeder
         	'username' => 'mire',
         	'password' => Hash::make('123456'),
         	'tipo' => 'adm',
+            'estado' => 'activo',
         	]);
 
         //Publicadores
@@ -30,6 +31,7 @@ class UsuarioSeeder extends Seeder
         	'username' => 'juan',
         	'password' => Hash::make('123456'),
         	'tipo' => 'pub',
+            'estado' => 'activo',
         	]);
         User::create([
         	'nombres' => 'Carlos',
@@ -38,6 +40,7 @@ class UsuarioSeeder extends Seeder
         	'username' => 'carlos',
         	'password' => Hash::make('123456'),
         	'tipo' => 'pub',
+            'estado' => 'activo',
         	]);
 
         //Lectores
@@ -48,6 +51,7 @@ class UsuarioSeeder extends Seeder
         	'username' => 'roci',
         	'password' => Hash::make('123456'),
         	'tipo' => 'lec',
+            'estado' => 'activo',
         	]);
         User::create([
         	'nombres' => 'Alejandra',
@@ -56,6 +60,7 @@ class UsuarioSeeder extends Seeder
         	'username' => 'ale',
         	'password' => Hash::make('123456'),
         	'tipo' => 'lec',
+            'estado' => 'activo',
         	]);
         User::create([
         	'nombres' => 'Marcelo',
@@ -64,6 +69,7 @@ class UsuarioSeeder extends Seeder
         	'username' => 'marce',
         	'password' => Hash::make('123456'),
         	'tipo' => 'lec',
+            'estado' => 'activo',
         	]);
     }
 }
