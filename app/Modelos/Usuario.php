@@ -2,7 +2,7 @@
 
 namespace App\Modelos;
 
-//use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User;
 
 class Usuario extends User
@@ -27,7 +27,14 @@ class Usuario extends User
     }
 
     public function usuarioTarea(){
-        return $this->hasMany('App\Modelos\UsuarioTarea', 'id_usuario');
+        return $this->hasMany('App\Modelos\UsuarioTarea', 'id_usuario', 'id_usuario');
+    }
+
+
+    public function prueba(){
+
+        $pruebas = BD::table('usuarios')->get();
+        echo $pruebas;
     }
 }
     

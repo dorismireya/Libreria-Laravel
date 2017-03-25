@@ -18,7 +18,7 @@ class UsuarioSeeder extends Seeder
         	'apellidos' => 'Terceros',
         	'email' => 'mir.nereidas@gmail.com',
         	'username' => 'mire',
-        	'password' => Hash::make('123456'),
+        	'password' => '123456',
         	'tipo' => 'adm',
             'estado' => 'activo',
         	]);
@@ -29,7 +29,7 @@ class UsuarioSeeder extends Seeder
         	'apellidos' => 'Perez',
         	'email' => 'juan@gmail.com',
         	'username' => 'juan',
-        	'password' => Hash::make('123456'),
+        	'password' => '123456',
         	'tipo' => 'pub',
             'estado' => 'activo',
         	]);
@@ -38,7 +38,7 @@ class UsuarioSeeder extends Seeder
         	'apellidos' => 'Martines',
         	'email' => 'carlos@gmail.com',
         	'username' => 'carlos',
-        	'password' => Hash::make('123456'),
+        	'password' => '123456',
         	'tipo' => 'pub',
             'estado' => 'activo',
         	]);
@@ -49,7 +49,7 @@ class UsuarioSeeder extends Seeder
         	'apellidos' => 'Ovando',
         	'email' => 'roci@gmail.com',
         	'username' => 'roci',
-        	'password' => Hash::make('123456'),
+        	'password' => '123456',
         	'tipo' => 'lec',
             'estado' => 'activo',
         	]);
@@ -58,7 +58,7 @@ class UsuarioSeeder extends Seeder
         	'apellidos' => 'Flores',
         	'email' => 'ale@gmail.com',
         	'username' => 'ale',
-        	'password' => Hash::make('123456'),
+        	'password' => '123456',
         	'tipo' => 'lec',
             'estado' => 'activo',
         	]);
@@ -67,7 +67,7 @@ class UsuarioSeeder extends Seeder
         	'apellidos' => 'Perez',
         	'email' => 'marce@gmail.com',
         	'username' => 'marce',
-        	'password' => Hash::make('123456'),
+        	'password' => '123456',
         	'tipo' => 'lec',
             'estado' => 'activo',
         	]);

@@ -128,6 +128,21 @@ class UsuarioController extends Controller
         return view('usuarios.perfil', compact('usuario'));
     }
 
+
+    /*public function funcionUsuario($id){
+        $funcionUsuario = funciones::($id)
+            ->join('tareas', 'tareas.id_funcion', '=', 'funciones.id_funcion')
+            ->join('usuarios_tareas', 'usuarios_tareas.id_tarea', '=', 'tareas.id_tarea')
+            ->select('funciones.*')
+            ->where('usuarios_tareas.id_usuario', '=', $id)
+            ->groupBy('funciones.id_funcion')
+            ->orderBy('funciones.funcion', 'asc')
+            ->get();
+
+        return echo "ok";
+
+    }*/
+
     
 
 }

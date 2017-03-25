@@ -22,7 +22,7 @@ Route::get('usuario_crear', function(){
 	return view('usuarios.create');
 });
 
-Route::resource('libros', 'LibroController');
+//Route::resource('libros', 'LibroController');
 
 Route::resource('tareas', 'TareaController');
 
@@ -30,11 +30,13 @@ Route::resource('funciones', 'FuncionController');
 
 Route::resource('roles', 'RolController');
 
+Route::get('usuarios/prueba', 'UsuarioController@prueba')->name('usuarios.prueba');
+
 //Route::get('usuarioTarea', 'UsuarioTareaController');
 //Route::get('tareaRol', 'TareaRolController');
 
-Route::get('libro_crear', function(){
+/*Route::get('libro_crear', function(){
 	return view('libros.create');
-});
+});*/
 
 

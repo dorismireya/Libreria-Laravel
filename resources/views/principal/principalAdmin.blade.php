@@ -26,12 +26,13 @@
 	    </div>
 	    <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
 	    	<ul class="nav navbar-nav navbar-right">
-	      		
+	      			@if(Auth::check())
 	      			<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
 							aria-expanded="false"> <b class="glyphicon glyphicon-user"></b>
 							{{ Auth::user()->nombres}}&nbsp;
 							{{ Auth::user()->apellidos}}&nbsp;
+							
 							<span class="caret"></span>
 						</a>
 			          	<ul class="dropdown-menu">
@@ -40,7 +41,7 @@
 			            	</li>
 			          	</ul>
 			        </li>
-			  	
+			  		@endif
 			</ul>
 	    </div>
 	  </div>
